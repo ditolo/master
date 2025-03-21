@@ -1,20 +1,19 @@
 :root {
-    --mainbg: #0c0c0c;
+    --mainbg: black;
     --lvl0bg: #242424;
     --lvl1bg: #505050;
     --lvl2bg: #747474;
     --lvl3bg: #7c7c7c;
     --lvl4bg: #afafaf;
     --lvl5bg: #62447c;
-    --shadowstd: 3px 3px 3px rgb(0, 0, 0);
+    --shadowstd: 6px 6px 3px rgb(0, 0, 0);
     background-color: var(--mainbg);
 }
 
 * {
     text-align: center;
     font-size: x-large;
-
-    color: rgb(0, 0, 0);
+    color: rgb(206, 206, 206);
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
     justify-content: center;
@@ -24,8 +23,23 @@
     overflow-wrap: break-word;
 }
 
+h1 {
+    background-color: var(--lvl5bg);
+    box-shadow: var(--shadowstd);
+}
+
+h2 {
+    background-color: var(--lvl5bg);
+    box-shadow: var(--shadowstd);
+}
+
 a {
     text-decoration: none;
+}
+
+.webimg {
+    border-radius: 2vw;
+    max-width: 12vw;
 }
 
 .logotd {
@@ -45,6 +59,14 @@ a {
 
 p {
     max-width: fit-content;
+    word-break: normal;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--lvl0bg);
+    justify-content: center;
+    box-shadow: var(--shadowstd);
 }
 
 header>div {
@@ -57,60 +79,6 @@ header>div {
     justify-content: space-evenly;
     padding: 0vw;
     background-color: rgb(32, 32, 32);
-}
-
-header {
-    grid-area: header;
-    background-color: var(--lvl0bg);
-    justify-content: center;
-    box-shadow: var(--shadowstd);
-}
-
-content {
-    grid-area: content;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: fit-content;
-    background-color: var(--lvl2bg);
-}
-
-article {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-    justify-items: center;
-    align-self: center;
-    background-color: var(--lvl3bg);
-    min-width: 80vw;
-}
-
-web-element {
-    display: flex;
-    flex-direction: column;
-    min-width: 10vw;
-    background-color: var(--lv3bg);
-    box-shadow: var(--shadowstd);
-}
-
-
-webs-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: var(--lvl3bg);
-    box-shadow: var(--shadowstd);
-}
-
-
-body {
-    display: grid;
-    grid-template-areas:
-        "header header"
-        "aside nav"
-        "aside content"
-        "footer footer";
-    grid-template-columns: 1fr 5fr;
 }
 
 nav {
@@ -130,6 +98,65 @@ nav>a {
     align-content: space-evenly;
     background-color: var(--lvl5bg);
     box-shadow: var(--shadowstd);
+}
+
+main {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    background-color: var(--lvl0bg);
+}
+
+article {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+    background-color: var(--lvl1bg);
+}
+
+button {
+    background-color: #482e5f;
+}
+
+input {
+    background-color: #7c7c7c;
+}
+
+textarea {
+    background-color: #7c7c7c;
+}
+
+webs-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: var(--lvl1bg);
+    box-shadow: var(--shadowstd);
+}
+
+web-element {
+    display: grid;
+    grid-template-columns: auto;
+    min-width: 10vw;
+    max-width: 16vw;
+    background-color: var(--lvl2bg);
+    box-shadow: var(--shadowstd);
+    justify-content: center;
+    justify-items: center;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "aside nav"
+        "aside content"
+        "footer footer";
+    grid-template-columns: 1fr 5fr;
 }
 
 aside {
@@ -162,17 +189,6 @@ aside>div>div>div {
     box-shadow: var(--shadowstd);
 }
 
-
-h1 {
-    background-color: var(--lvl5bg);
-    box-shadow: var(--shadowstd);
-}
-
-h2 {
-    background-color: var(--lvl5bg);
-    box-shadow: var(--shadowstd);
-}
-
 footer {
     grid-area: footer;
     background-color: var(--lvl0bg);
@@ -187,8 +203,6 @@ footer>a {
     box-shadow: var(--shadowstd);
     width: 20vw;
 }
-
-
 
 form {
     display: grid;
@@ -241,6 +255,4 @@ form {
     #asidesmallscreen {
         display: flex;
     }
-
-
 }

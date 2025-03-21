@@ -21,11 +21,10 @@
 <body>
     <header>
         <div>
-            <img class="logotd" src="public/imagenes/TDCodeLogoInkPlano.svg" alt="" />
-            <img class="retratotd" src="public/imagenes/ImagenVector.svg" alt="" />
+            <img class="logotd" src="public/imagenes/TDCodeLogoInkPlano.svg" alt="">
+            <img class="retratotd" src="public/imagenes/ImagenVector.svg" alt="">
         </div>
         <h1>Bienvenido a mi portafolio</h1>
-
     </header>
     <nav>
         <a href="#profile">Sobre mi</a>
@@ -38,11 +37,11 @@
                 <div>HTML5</div>
                 <div>CSS3</div>
                 <div>JavaScript</div>
+                <div>React</div>
             </div>
             <div>Backend
                 <div>Python</div>
                 <div>Java</div>
-                <div>React</div>
                 <div>Express</div>
             </div>
             <div>Bases de datos
@@ -56,12 +55,12 @@
                 <div>HTML5</div>
                 <div>CSS3</div>
                 <div>JavaScript</div>
+                <div>React</div>
             </div>
             <button type="button" onclick="showhide('divback')">Backend</button>
             <div id="divback" class="divback" style="display: none">Backend
                 <div>Python</div>
                 <div>Java</div>
-                <div>React</div>
                 <div>Express</div>
             </div>
             <button type="button" onclick="showhide('divbbdd')">Bases de datos</button>
@@ -71,16 +70,18 @@
             </div>
         </div>
     </aside>
-    <content>
+    <main>
         <article>
             <h2 id="profile">
                 Sobre mi:
             </h2>
             <p>
-                Me llamo Diego Torcal, nacido en España allá por 1992.
+                <br>Soy Diego Torcal.<br><br>
+                Estudié Ingeniería en Organización Industrial en la Universidad Politécnica de Cartagena.<br><br>
+                Posteriormente, me gradué como programador Full Stack en Prometeo, con especialización en programación
+                Web.<br><br>
+                Estoy aquí para ayudarte a digitalizar tu vida y hacer tu transición al mundo web más sencilla.
             </p>
-            <img src="public/imagenes/OIP.jpeg" alt="Pingüino"></img>Un pingu más
-            <button type="submit">Enviar</button>
         </article>
         <div>
             <h2 id="webs">
@@ -92,9 +93,9 @@
                         Web 1
                     </h2>
                     <p class="webdescription">
-                        Descripción de web 1
+                        Descripción web 1
                     </p>
-                    <img src="public/imagenes/OIP.jpeg" alt="Pingüino"></img>Un pingu más
+                    <img class="webimg" src="public/imagenes/OIP.jpeg" alt="Pingüino">
                     <button type="submit">Visitar</button>
                 </web-element>
                 <web-element>
@@ -102,9 +103,9 @@
                         Web 2
                     </h2>
                     <p class="webdescription">
-                        Descripción de web 2
+                        Descripción web 2
                     </p>
-                    <img src="public/imagenes/OIP.jpeg" alt="Pingüino"></img>Un pingu más
+                    <img class="webimg" src="public/imagenes/OIP.jpeg" alt="Pingüino">
                     <button type="submit">Visitar</button>
                 </web-element>
                 <web-element>
@@ -112,9 +113,9 @@
                         Web 3
                     </h2>
                     <p class="webdescription">
-                        Descripción de web 3
+                        Descripción web 3
                     </p>
-                    <img src="public/imagenes/OIP.jpeg" alt="Pingüino"></img>Un pingu más
+                    <img class="webimg" src="public/imagenes/OIP.jpeg" alt="Pingüino">
                     <button type="submit">Visitar</button>
                 </web-element>
                 <web-element>
@@ -122,9 +123,9 @@
                         Web 4
                     </h2>
                     <p class="webdescription">
-                        Descripción de web 4
+                        Descripción web 4
                     </p>
-                    <img src="public/imagenes/OIP.jpeg" alt="Pingüino"></img>Un pingu más
+                    <img class="webimg" src="public/imagenes/OIP.jpeg" alt="Pingüino">
                     <button type="submit">Visitar</button>
                 </web-element>
                 <web-element>
@@ -132,9 +133,9 @@
                         Web 5
                     </h2>
                     <p class="webdescription">
-                        Descripción de web 5
+                        Descripción web 5
                     </p>
-                    <img src="public/imagenes/OIP.jpeg" alt="Pingüino"></img>Un pingu más
+                    <img class="webimg" src="public/imagenes/OIP.jpeg" alt="Pingüino">
                     <button type="submit">Visitar</button>
                 </web-element>
                 <web-element>
@@ -142,9 +143,9 @@
                         Web 6
                     </h2>
                     <p class="webdescription">
-                        Descripción de web 6
+                        Descripción web 6
                     </p>
-                    <img src="public/imagenes/OIP.jpeg" alt="Pingüino"></img>Un pingu más
+                    <img class="webimg" src="public/imagenes/OIP.jpeg" alt="Pingüino">
                     <button type="submit">Visitar</button>
                 </web-element>
             </webs-container>
@@ -154,22 +155,22 @@
                 Para contactar rellena el siguiente formulario:
             </h2>
             <form>
-                <label for="fname">First name:</label>
+                <label for="fname">Nombre:</label>
                 <input type="text" id="fname" name="fname">
-                <label for="lname">Last name:</label>
+                <label for="lname">Apellido:</label>
                 <input type="text" id="lname" name="lname">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email">
-                <label for="message">Message:</label>
-                <textarea name="message" rows="10" cols="30">Write you message.</textarea>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" rows="10" cols="30">Escribe tu mensaje.</textarea>
                 <div>
                     <input type="checkbox" id="terms" name="terms" value="termsok">
-                    <label for="terms"> I have read terms and conditions</label>
+                    <label for="terms"> He leído los términos y condiciones</label>
                 </div>
-                <input type="submit" value="Send">
+                <input type="submit" value="Enviar">
             </form>
         </article>
-    </content>
+    </main>
     <footer>
         <a href="#legalinformacion">Información Legal</a>
         <a href="#redes">Redes</a>
