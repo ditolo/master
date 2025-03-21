@@ -7,7 +7,7 @@
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        function myFunction(param) {
+        function showhide(param) {
             var x = document.getElementById(param);
             if (x.style.display == 'none') {
                 x.style.display = 'block';
@@ -51,20 +51,20 @@
             </div>
         </div>
         <div id="asidesmallscreen">Mi stack
-            <button type="button" onclick="myFunction('divfront')">Frontend</button>
+            <button type="button" onclick="showhide('divfront')">Frontend</button>
             <div id="divfront" class="divfront" style="display: none">Frontend
                 <div>HTML5</div>
                 <div>CSS3</div>
                 <div>JavaScript</div>
             </div>
-            <button type="button" onclick="myFunction('divback')">Backend</button>
+            <button type="button" onclick="showhide('divback')">Backend</button>
             <div id="divback" class="divback" style="display: none">Backend
                 <div>Python</div>
                 <div>Java</div>
                 <div>React</div>
                 <div>Express</div>
             </div>
-            <button type="button" onclick="myFunction('divbbdd')">Bases de datos</button>
+            <button type="button" onclick="showhide('divbbdd')">Bases de datos</button>
             <div id="divbbdd" class="divbbdd" style="display: none">Bases de datos
                 <div>SQL</div>
                 <div>NoSQL</div>
@@ -79,7 +79,6 @@
             <p>
                 Me llamo Diego Torcal, nacido en España allá por 1992.
             </p>
-            <textarea> Esto es un textarea</textarea>
             <img src="public/imagenes/OIP.jpeg" alt="Pingüino"></img>Un pingu más
             <button type="submit">Enviar</button>
         </article>
@@ -89,7 +88,7 @@
             </h2>
             <webs-container>
                 <web-element>
-                    <h2 id="webs">
+                    <h2 id="webs0">
                         Web 1
                     </h2>
                     <p class="webdescription">
@@ -119,7 +118,7 @@
                     <button type="submit">Visitar</button>
                 </web-element>
                 <web-element>
-                    <h2 id="webs3">
+                    <h2 id="webs4">
                         Web 4
                     </h2>
                     <p class="webdescription">
@@ -129,7 +128,7 @@
                     <button type="submit">Visitar</button>
                 </web-element>
                 <web-element>
-                    <h2 id="webs3">
+                    <h2 id="webs5">
                         Web 5
                     </h2>
                     <p class="webdescription">
@@ -139,7 +138,7 @@
                     <button type="submit">Visitar</button>
                 </web-element>
                 <web-element>
-                    <h2 id="webs3">
+                    <h2 id="webs6">
                         Web 6
                     </h2>
                     <p class="webdescription">
@@ -152,20 +151,28 @@
         </div>
         <article>
             <h2 id="contact">
-                Esto es un texto h2 en un article
+                Para contactar rellena el siguiente formulario:
             </h2>
-            <p>
-                Este es el cuerpo del artículo, donde me presento y os cuento mi vida
-            </p>
-            <textarea> Esto es un textarea</textarea>
-            <img src="public/imagenes/OIP.jpeg" alt="Pingüino"></img>Un pingu más
-            <button type="submit">Enviar</button>
+            <form>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname">
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Message:</label>
+                <textarea name="message" rows="10" cols="30">Write you message.</textarea>
+                <div>
+                    <input type="checkbox" id="terms" name="terms" value="termsok">
+                    <label for="terms"> I have read terms and conditions</label>
+                </div>
+                <input type="submit" value="Send">
+            </form>
         </article>
     </content>
     <footer>
         <a href="#legalinformacion">Información Legal</a>
         <a href="#redes">Redes</a>
-        <a href="#contact">Contacto</a>
     </footer>
 </body>
 
