@@ -1,0 +1,245 @@
+:root {
+    --mainbg: #c6dfd4;
+    --lvl0bg: #3baea0;
+    --lvl1bg: #118a7e;
+    --lvl2bg: #1f6f78;
+    --lvl3bg: #93e4c1;
+    --lvl4bg: #9cdfc2;
+    --lvl5bg: #93e4c1;
+    --shadowstd: 0px 0px 0px rgb(0, 0, 0);
+}
+
+* {
+    text-align: center;
+    font-size: x-large;
+    background-color: var(--mainbg);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    margin: 0.2vw;
+    padding: 0.5vw;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+.logotd {
+    height: 10vw;
+    background-color: transparent;
+    padding: 1vw;
+}
+
+.retratotd {
+    height: 15vw;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+}
+
+.webdescription {
+    max-width: 30vw;
+    background-color: transparent;
+}
+
+p {
+    max-width: fit-content;
+}
+
+header>div {
+    background-image: url(/public/imagenes/TetoFondo.svg);
+    background-blend-mode: color-dodge;
+    background-position: 0vh;
+    background-size: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0vw;
+    background-color: rgb(32, 32, 32);
+}
+
+header {
+    grid-area: header;
+    background-color: var(--lvl0bg);
+    justify-content: center;
+    box-shadow: var(--shadowstd);
+}
+
+content {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    background-color: var(--lvl2bg);
+}
+
+article {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+    background-color: var(--lvl4bg);
+    min-width: 80vw;
+}
+
+web-element {
+    display: flex;
+    flex-direction: column;
+    min-width: 10vw;
+    background-color: var(--lvlbg);
+}
+
+webs-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: var(--lvl4bg);
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "aside nav"
+        "aside content"
+        "footer footer";
+    grid-template-columns: 1fr 5fr;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    background-color: var(--lvl1bg);
+    justify-content: space-around;
+    box-shadow: var(--shadowstd);
+}
+
+nav>a {
+    width: 20vw;
+    height: 3vh;
+    align-content: space-evenly;
+    background-color: var(--lvl2bg);
+}
+
+aside {
+    grid-area: aside;
+    background-color: var(--lvl0bg);
+    box-shadow: var(--shadowstd);
+}
+
+aside>div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--lvl1bg);
+    box-shadow: var(--shadowstd);
+}
+
+aside>div>div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--lvl2bg);
+    box-shadow: var(--shadowstd);
+}
+
+aside>div>div>div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--lvl3bg);
+    box-shadow: var(--shadowstd);
+}
+
+
+h1 {
+    background-color: var(--lvl1bg);
+    box-shadow: var(--shadowstd);
+}
+
+h2 {
+    background-color: var(--lvl0bg);
+    box-shadow: var(--shadowstd);
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--lvl0bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: var(--shadowstd);
+}
+
+footer>a {
+    background-color: var(--lvl2bg);
+    box-shadow: var(--shadowstd);
+    width: 20vw;
+}
+
+
+
+form {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.divfront,
+.divbbdd,
+.divback {
+    display: none;
+}
+
+#asidesmallscreen {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    * {
+        font-size: medium;
+        margin: 1vw;
+        padding: 1vw;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    aside>div>div {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+
+    body {
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "aside aside"
+            "content content"
+            "footer footer";
+    }
+
+    #asidelargescreen {
+        display: none;
+    }
+
+    #asidesmallscreen {
+        display: flex;
+    }
+
+
+}
