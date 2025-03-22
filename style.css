@@ -137,6 +137,7 @@ webs-container {
     flex-direction: row;
     background-color: var(--lvl1bg);
     box-shadow: var(--shadowstd);
+
 }
 
 web-element {
@@ -148,6 +149,8 @@ web-element {
     box-shadow: var(--shadowstd);
     justify-content: center;
     justify-items: center;
+
+
 }
 
 body {
@@ -195,14 +198,15 @@ footer {
     background-color: var(--lvl0bg);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: stretch, center;
     box-shadow: var(--shadowstd);
+
 }
 
 footer>a {
     background-color: var(--lvl5bg);
     box-shadow: var(--shadowstd);
-    width: 20vw;
+    flex-basis: 50vw;
 }
 
 form {
