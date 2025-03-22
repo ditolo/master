@@ -116,6 +116,7 @@ article {
     justify-items: center;
     align-self: center;
     background-color: var(--lvl1bg);
+    box-shadow: var(--shadowstd);
 }
 
 button {
@@ -255,4 +256,15 @@ form {
     #asidesmallscreen {
         display: flex;
     }
+
+    web-element {
+        min-width: 70vw;
+        max-width: 25vw;
+    }
+
+    .webimg {
+        border-radius: 2vw;
+        max-width: 40vw;
+    }
+
 }
