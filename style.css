@@ -13,13 +13,13 @@
 }
 
 .light {
-    --mainbg: rgb(234, 228, 208);
-    --lvl0bg: rgb(201, 196, 176);
-    --lvl1bg: rgb(181, 174, 151);
-    --lvl2bg: #c8c8c8;
-    --lvl3bg: #b4b4b4;
-    --lvl4bg: #a0a0a0;
-    --lvl5bg: rgb(180, 171, 138);
+    --mainbg: rgb(255, 252, 243);
+    --lvl0bg: rgb(255, 249, 224);
+    --lvl1bg: rgb(255, 245, 212);
+    --lvl2bg: rgb(255, 238, 183);
+    --lvl3bg: rgb(255, 236, 160);
+    --lvl4bg: rgb(255, 231, 154);
+    --lvl5bg: rgb(255, 230, 141);
     --shadowstd: 6px 6px 3px rgba(0, 0, 0, 0.5);
     --fontcolor: black;
     background-color: var(--mainbg);
@@ -30,7 +30,7 @@
     
     color: var(--fontcolor);
     text-align: center;
-    font-size: x-large;
+    font-size: 1.5vw;
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
     justify-content: center;
@@ -38,6 +38,9 @@
     padding: 0.5vw;
     word-break: normal;
     overflow-wrap: break-word;
+    --btnsize: 1vw;
+    --floatbtnw: 10vw;
+    --floatbtnh: 1.5vw;
 }
 
 h1 {
@@ -116,7 +119,9 @@ nav>a {
     height: 3vw;
     background-color: var(--lvl5bg);
     box-shadow: var(--shadowstd);
-    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -142,22 +147,28 @@ article {
     position: fixed;
     top: 1vw;
     right: 1vw;
-    width: 10vw;
-    height: 3vw;
+    width: var(--floatbtnw);
+    height: var(--floatbtnh);
     background-color: var(--lvl5bg);
     box-shadow: var(--shadowstd);
-    font-size: 1vw;
+    font-size: var(--btnsize);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .volverArriba {
     position: fixed;
     bottom: 1vw;
     right: 1vw;
-    width: 10vw;
-    height: 3vw;
+    width: var(--floatbtnw);
+     height: var(--floatbtnh);
     background-color: var(--lvl5bg);
     box-shadow: var(--shadowstd);
-    font-size: 1vw;
+    font-size: var(--btnsize);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -165,15 +176,14 @@ button {
     height: auto;
     background-color: var(--lvl5bg);
     box-shadow: var(--shadowstd);
-    font-size: 1.5vw;
 }
 
 input {
-    background-color: #7c7c7c;
+    background-color: var(--lvl2bg);
 }
 
 textarea {
-    background-color: #7c7c7c;
+    background-color: var(--lvl2bg);
 }
 
 webs-container {
@@ -274,6 +284,14 @@ form {
         font-size: medium;
         margin: 1vw;
         padding: 1vw;
+        --btnsize: 2vw;
+    --floatbtnw: 25vw;
+    --floatbtnh: 4vw;
+    }
+
+    nav>a{
+        width: 20vw;
+        height: 5vw;
     }
 
     aside {
@@ -314,6 +332,10 @@ form {
     .webimg {
         border-radius: 2vw;
         max-width: 40vw;
+    }
+    button {
+        height: 5vw;
+        font-size: 3vw;
     }
 
 }
