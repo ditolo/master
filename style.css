@@ -1,4 +1,4 @@
-:root {
+.dark {
     --mainbg: black;
     --lvl0bg: #242424;
     --lvl1bg: #505050;
@@ -7,13 +7,30 @@
     --lvl4bg: #afafaf;
     --lvl5bg: #62447c;
     --shadowstd: 6px 6px 3px rgb(0, 0, 0);
+    --fontcolor: white;
     background-color: var(--mainbg);
+    
+}
+
+.light {
+    --mainbg: rgb(234, 228, 208);
+    --lvl0bg: rgb(201, 196, 176);
+    --lvl1bg: rgb(181, 174, 151);
+    --lvl2bg: #c8c8c8;
+    --lvl3bg: #b4b4b4;
+    --lvl4bg: #a0a0a0;
+    --lvl5bg: rgb(180, 171, 138);
+    --shadowstd: 6px 6px 3px rgba(0, 0, 0, 0.5);
+    --fontcolor: black;
+    background-color: var(--mainbg);
+   
 }
 
 * {
+    
+    color: var(--fontcolor);
     text-align: center;
     font-size: x-large;
-    color: rgb(206, 206, 206);
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
     justify-content: center;
@@ -35,6 +52,8 @@ h2 {
 
 a {
     text-decoration: none;
+    color: var(--fontcolor);
+
 }
 
 .webimg {
@@ -88,16 +107,16 @@ nav {
     flex-wrap: wrap;
     list-style-type: none;
     background-color: var(--lvl0bg);
-    justify-content: space-around;
+    justify-content: space-between;
     box-shadow: var(--shadowstd);
 }
 
 nav>a {
-    width: 20vw;
-    height: 3vh;
-    align-content: space-evenly;
+    width: 15vw;
+    height: 3vw;
     background-color: var(--lvl5bg);
     box-shadow: var(--shadowstd);
+    font-size: 1.5vw;
 }
 
 main {
@@ -119,8 +138,34 @@ article {
     box-shadow: var(--shadowstd);
 }
 
+.themebutton {
+    position: fixed;
+    top: 1vw;
+    right: 1vw;
+    width: 10vw;
+    height: 3vw;
+    background-color: var(--lvl5bg);
+    box-shadow: var(--shadowstd);
+    font-size: 1vw;
+}
+
+.volverArriba {
+    position: fixed;
+    bottom: 1vw;
+    right: 1vw;
+    width: 10vw;
+    height: 3vw;
+    background-color: var(--lvl5bg);
+    box-shadow: var(--shadowstd);
+    font-size: 1vw;
+}
+
 button {
-    background-color: #482e5f;
+    width: auto;
+    height: auto;
+    background-color: var(--lvl5bg);
+    box-shadow: var(--shadowstd);
+    font-size: 1.5vw;
 }
 
 input {

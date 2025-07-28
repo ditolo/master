@@ -18,11 +18,31 @@
                 x.style.display = 'none';
             }
         }
+        function toggleTheme() {
+            var body = document.body;
+            if (body.classList.contains('dark')) {
+                body.classList.remove('dark');
+                body.classList.add('light');
+            } else {
+                body.classList.remove('light');
+                body.classList.add('dark');
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            var body = document.body;
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                body.classList.add('dark');
+            } else {
+                body.classList.add('light');
+            }
+        });
     </script>
 
 </head>
 
 <body>
+    <button class="themebutton" type="button" onclick="toggleTheme()">Cambiar tema</button>
+    <button class="volverArriba" type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Arriba</button>
     <header>
         <div>
             <img class="logotd" src="public/imagenes/TDCodeLogoInkPlano.svg" alt="">
@@ -35,6 +55,7 @@
         <a href="#webs">Mis webs</a>
         <a href="#contact">Contacto</a>
     </nav>
+    
     <aside>
         <div id="asidelargescreen">Mi stack
             <div>Frontend
