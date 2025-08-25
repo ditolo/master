@@ -59,6 +59,10 @@ a {
 
 }
 
+summary{
+    list-style: none;
+}
+
 .webimg {
     border-radius: 2vw;
     max-width: 12vw;
@@ -232,12 +236,33 @@ aside>div {
     box-shadow: var(--shadowstd);
 }
 
+details>div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--lvl1bg);
+    box-shadow: var(--shadowstd);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
 aside>div>div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     background-color: var(--lvl2bg);
     box-shadow: var(--shadowstd);
+}
+
+details>div>div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    align-self: center;
+    flex-direction: column;
+    background-color: var(--lvl5bg);
+    box-shadow: var(--shadowstd);
+
 }
 
 aside>div>div>div {
@@ -247,6 +272,7 @@ aside>div>div>div {
     background-color: var(--lvl5bg);
     box-shadow: var(--shadowstd);
 }
+
 
 footer {
     grid-area: footer;
@@ -280,17 +306,21 @@ form {
 }
 
 @media only screen and (max-width: 1000px) {
+    :root{
+        margin-top: 4vw;
+    }
+    
     * {
         font-size: medium;
-        margin: 1vw;
-        padding: 1vw;
+        margin: 0.2vw;
+        padding: 0.5vw;
         --btnsize: 2vw;
-    --floatbtnw: 25vw;
-    --floatbtnh: 4vw;
+        --floatbtnw: 25vw;
+        --floatbtnh: 4vw;
     }
 
     nav>a{
-        width: 20vw;
+        width: 23vw;
         height: 5vw;
     }
 
@@ -336,6 +366,9 @@ form {
     button {
         height: 5vw;
         font-size: 3vw;
+    }
+    footer{
+        margin-bottom: 3vw;
     }
 
 }
