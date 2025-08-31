@@ -36,3 +36,11 @@ function showhide(param) {
             localStorage.cookiesAccepted = "true";
             popup.classList.remove("show");
         });
+
+        function showTerms() {
+            document.getElementById("termsPopup").style.display = "block";
+        }
+
+        function closeterms() {
+            document.getElementById("termsPopup").style.display = "none";
+        }

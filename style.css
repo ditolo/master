@@ -53,6 +53,40 @@
     --floatbtnh: 1.5vw;
 }
 
+.terms-popup{
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    background-color: #707070;
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60%;
+    height: 60%;
+    margin: auto;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.formterms{
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    background-color: #707070;
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60%;
+    height: fit-content;
+    margin: auto;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
 h1 {
     background-color: var(--lvl5bg);
     box-shadow: var(--shadowstd);

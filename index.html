@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-
 <body>
     <div class="cookie-popup" id="cookiePopup">
         <p>Este sitio utiliza cookies para mejorar tu experiencia.</p>
@@ -26,13 +25,11 @@
         </div>
         <h1>Bienvenido a mi portafolio</h1>
     </header>
-    
     <nav>
         <a href="#profile">Sobre mi</a>
         <a href="#webs">Mis webs</a>
         <a href="#contact">Contacto</a>
     </nav>
-
     <aside>
         <div id="asidelargescreen">Mi stack
             <div>Frontend
@@ -126,7 +123,7 @@
             <h2 id="contact">
                 Para contactar rellena el siguiente formulario:
             </h2>
-            <form>
+            <form action="https://formsubmit.co/53d889095ef5dd17916288566f648edb" target="_blank" rel="noopener noreferrer" method="POST">
                 <label for="fname">Nombre:</label>
                 <input type="text" id="fname" name="fname">
                 <label for="lname">Apellido:</label>
@@ -134,19 +131,41 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email">
                 <label for="message">Mensaje:</label>
-                <textarea id="message" rows="10" cols="30">Escribe tu mensaje.</textarea>
-                <div>
-                    <input type="checkbox" id="terms" name="terms" value="termsok">
-                    <label for="terms"> He leído los términos y condiciones</label>
-                </div>
-                <input type="submit" value="Enviar">
+                <input type="textarea" rows="10" cols="30">Escribe tu mensaje.</input>
+                <input type="submit" value="Enviar" disabled="true" >
             </form>
+                <div>
+                    <input type="checkbox" id="terms" name="terms" value="termsok"
+                        onchange="document.querySelector('input[type=submit]').disabled = !this.checked;">
+                    <label for="terms"> He leído los términos y condiciones</label>
+                    <button onclick="showhide('formterms')">Saber más sobre los términos y condiciones.</button>
+                </div>
         </article>
     </main>
     <footer>
-        <a href="#legalinformacion">Información Legal</a>
+        <a onclick="showTerms()" href="#legalinformacion">Términos legales</a>
         <a href="#redes">Redes</a>
     </footer>
+    <div class="terms-popup" id="termsPopup" style="display: none;">
+        <h2 id="legalinformacion">Términos legales</h2>
+        <p>
+            Esta página web es un portafolio personal desarrollado por Diego Torcal. Al utilizar este sitio, aceptas los siguientes términos y condiciones:
+        </p>
+        <ul>
+            <li>El contenido de este portafolio es propiedad intelectual de Diego Torcal y está protegido por las leyes de derechos de autor.</li>
+            <li>No se permite la reproducción, distribución o uso del contenido sin el permiso expreso del autor.</li>
+            <li>Este portafolio puede contener enlaces a sitios web de terceros. No nos hacemos responsables del contenido o las prácticas de privacidad de estos sitios.</li>
+            <li>Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Es tu responsabilidad revisar esta sección periódicamente para estar al tanto de cualquier cambio.</li>
+            <li>El uso continuado de este sitio después de la publicación de cambios en los términos y condiciones constituye tu aceptación de dichos cambios.</li>
+        </ul>
+        <button id="closeTerms" onclick="closeterms()">Cerrar</button>
+    </div>
+    <div class="formterms" id="formterms" style="display: none;">
+        <p>Al enviar este formulario, aceptas que tus datos sean utilizados para responder a tu consulta. Consulta nuestra para más información.</p>
+        <p>Los datos que envías son tratados por Formsubmit con el fin de realizar el envío de los mismos.</p>
+        <p>Consulta la política de privacidad de Formsubmit para más información.</p>
+        <a href="https://formsubmit.co/privacy.pdf">Política de privacidad</a>
+        <button id="closeprivacy" onclick="showhide('formterms')">Cerrar</button>
+    </div>
 </body>
-
 </html>
