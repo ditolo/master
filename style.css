@@ -1,3 +1,13 @@
+@font-face{
+    font-family:downloaded;
+    src: url('/public/fonts/KGPerfectPenmanship.ttf')
+}
+
+@font-face {
+    font-family: midnight;
+    src: url('public/fonts/KGMidnightMemories.ttf');
+}
+
 .dark {
     --mainbg: black;
     --lvl0bg: #242424;
@@ -32,7 +42,7 @@
     text-align: center;
     font-size: 1.5vw;
     border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: midnight, Arial, sans-serif;
     justify-content: center;
     margin: 0.2vw;
     padding: 0.5vw;
@@ -46,16 +56,19 @@
 h1 {
     background-color: var(--lvl5bg);
     box-shadow: var(--shadowstd);
+    font-family: downloaded, Arial, sans-serif;
 }
 
 h2 {
     background-color: var(--lvl5bg);
     box-shadow: var(--shadowstd);
+    font-family: downloaded, Arial, sans-serif;
 }
 
 a {
     text-decoration: none;
     color: var(--fontcolor);
+        font-family: downloaded, Arial, sans-serif;
 
 }
 
@@ -80,7 +93,9 @@ summary{
 }
 
 .webdescription {
-    max-width: 30vw;
+    width: auto;
+    padding: 0;
+    margin: 1%;
 }
 
 p {
@@ -114,7 +129,7 @@ nav {
     flex-wrap: wrap;
     list-style-type: none;
     background-color: var(--lvl0bg);
-    justify-content: space-between;
+    justify-content: space-around;
     box-shadow: var(--shadowstd);
 }
 
@@ -193,7 +208,7 @@ textarea {
 webs-container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     background-color: var(--lvl1bg);
     box-shadow: var(--shadowstd);
 
@@ -202,8 +217,7 @@ webs-container {
 web-element {
     display: grid;
     grid-template-columns: auto;
-    min-width: 10vw;
-    max-width: 16vw;
+    width: auto;
     background-color: var(--lvl2bg);
     box-shadow: var(--shadowstd);
     justify-content: center;
