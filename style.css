@@ -63,6 +63,7 @@ h2 {
     background-color: var(--lvl5bg);
     box-shadow: var(--shadowstd);
     font-family: downloaded, Arial, sans-serif;
+    padding: 1.1vw;
 }
 
 a {
@@ -211,6 +212,8 @@ webs-container {
     flex-direction: column;
     background-color: var(--lvl1bg);
     box-shadow: var(--shadowstd);
+    justify-content: center;
+    align-items: center;
 
 }
 
