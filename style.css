@@ -305,6 +305,42 @@ form {
     display: none;
 }
 
+
+    .cookie-popup{
+    position: fixed;
+    top: 40%;
+    left: 35%;
+    background-color: #707070;
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 30%;
+    height: 20%;
+    margin: auto;
+    z-index: 1000;
+}
+
+.cookie-popup.show{
+    display: flex;
+}
+
+.cookie-popup button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cookie-popup a{
+    color: #007bff;
+    text-decoration: underline;
+}
+
 @media only screen and (max-width: 1000px) {
     :root{
         margin-top: 4vw;
@@ -370,5 +406,4 @@ form {
     footer{
         margin-bottom: 3vw;
     }
-
 }

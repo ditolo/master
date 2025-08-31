@@ -9,38 +9,14 @@
     <meta name="keywords" content="portfolio">
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function showhide(param) {
-            var x = document.getElementById(param);
-            if (x.style.display == 'none') {
-                x.style.display = 'block';
-            } else {
-                x.style.display = 'none';
-            }
-        }
-        function toggleTheme() {
-            var body = document.body;
-            if (body.classList.contains('dark')) {
-                body.classList.remove('dark');
-                body.classList.add('light');
-            } else {
-                body.classList.remove('light');
-                body.classList.add('dark');
-            }
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            var body = document.body;
-            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                body.classList.add('dark');
-            } else {
-                body.classList.add('light');
-            }
-        });
-    </script>
-
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <div class="cookie-popup" id="cookiePopup">
+        <p>Este sitio utiliza cookies para mejorar tu experiencia.</p>
+        <button id="acceptCookies">Aceptar</button>
+    </div>
     <button class="themebutton" type="button" onclick="toggleTheme()">Cambiar tema</button>
     <button class="volverArriba" type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Arriba</button>
     <header>
@@ -50,12 +26,13 @@
         </div>
         <h1>Bienvenido a mi portafolio</h1>
     </header>
+    
     <nav>
         <a href="#profile">Sobre mi</a>
         <a href="#webs">Mis webs</a>
         <a href="#contact">Contacto</a>
     </nav>
-    
+
     <aside>
         <div id="asidelargescreen">Mi stack
             <div>Frontend
@@ -74,7 +51,7 @@
                 <div>NoSQL</div>
             </div>
         </div>
-        <div id="asidesmallscreen">Mi stack (menú con JS)
+        <div id="asidesmallscreen">Mi stack
             <button type="button" onclick="showhide('divfront')">Frontend</button>
             <div id="divfront" class="divfront" style="display: none">
                 <div>HTML5</div>
@@ -93,42 +70,6 @@
                 <div>SQL</div>
                 <div>NoSQL</div>
             </div>
-        </div>
-        <div id="asidesmallscreen">
-            Mi stack (Menú con details)
-
-            <details>
-            <summary>
-            <h2>Frontend</h2>
-            </summary>
-            <div>
-                <div>HTML5</div>
-                <div>CSS3</div>
-                <div>JavaScript</div>
-                <div>React</div>
-            </div>
-            </details>
-
-            <details>
-            <summary>
-            <h2>Backend</h2>
-            </summary>
-            <div>
-                <div>Python</div>
-                <div>Java</div>
-                <div>Express</div>
-            </div>
-            </details>
-
-            <details>
-            <summary>
-            <h2>Bases de datos</h2>
-            </summary>
-            <div>
-                <div>SQL</div>
-                <div>NoSQL</div>
-            </div>
-            </details>
         </div>
     </aside>
     <main>
