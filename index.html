@@ -125,14 +125,15 @@
             </h2>
             <form action="https://formsubmit.co/53d889095ef5dd17916288566f648edb" target="_blank" method="POST">
                 <label for="fname">Nombre:</label>
-                <input type="text" id="fname" name="fname">
-                <label for="lname">Apellido:</label>
-                <input type="text" id="lname" name="lname">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="message">Mensaje:</label>
-                <input type="textarea" rows="10" cols="30">Escribe tu mensaje.</input>
-                <input type="submit" value="Enviar" disabled="true" >
+                <input type="text" id="fname" name="fname" placeholder="Tu nombre.." required>
+                <label for="lname">Apellido (opcional):</label>
+                <input type="text" id="lname" name="lname" placeholder="Tu apellido..">
+                <label for="email">Email (requerido):</label>
+                <input type="email" id="email" name="email" placeholder="Tu email.." required>
+                <label for="message">Mensaje (requerido):</label>
+                <textarea id="mensaje" rows="10" cols="30" placeholder="Tu mensaje..." required></textarea>
+                <label for="mensaje">Escribe tu mensaje.</label>
+                <input type="submit" value="Enviar" disabled="true">
             </form>
                 <div>
                     <input type="checkbox" id="terms" name="terms" value="termsok"
